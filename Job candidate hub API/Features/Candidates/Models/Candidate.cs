@@ -9,28 +9,29 @@ namespace Job_candidate_hub_API.Features.Candidates.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "First name is required.")]
         public string FirstName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Last name is required.")]
         public string LastName { get; set; }
 
-        [Phone]
+        [Phone(ErrorMessage = "Invalid phone number format.")]
         public string PhoneNumber { get; set; }
 
-        [Required]
-        [EmailAddress]
+        [Required(ErrorMessage = "Email is required.")]
+        [EmailAddress(ErrorMessage = "Invalid email address format.")]
         public string Email { get; set; }
 
         public string TimeInterval { get; set; }
 
-        [Url]
+        [Url(ErrorMessage = "Invalid URL format.")]
         public string LinkedInProfile { get; set; }
 
-        [Url]
+        [Url(ErrorMessage = "Invalid URL format.")]
+
         public string GitHubProfile { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "A comment is required.")]
         public string FreeTextComment { get; set; }
     }
 }
