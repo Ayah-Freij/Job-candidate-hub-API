@@ -25,11 +25,11 @@ namespace Job_candidate_hub_API.Features.Candidates.Models
         public string TimeInterval { get; set; }
 
         [Url(ErrorMessage = "Invalid URL format.")]
-        public string LinkedInProfile { get; set; }
+        public string LinkedInProfile { get; set; }=string.Empty;
 
         [Url(ErrorMessage = "Invalid URL format.")]
 
-        public string GitHubProfile { get; set; }
+        public string GitHubProfile { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "A comment is required.")]
         public string FreeTextComment { get; set; }
