@@ -15,7 +15,6 @@ namespace Job_candidate_hub_API.Features.Candidates.Models
         [Required(ErrorMessage = "Last name is required.")]
         public string LastName { get; set; }
 
-        [Phone(ErrorMessage = "Invalid phone number format.")]
         public string PhoneNumber { get; set; }
 
         [Required(ErrorMessage = "Email is required.")]
@@ -24,10 +23,8 @@ namespace Job_candidate_hub_API.Features.Candidates.Models
 
         public string TimeInterval { get; set; }
 
-        [Url(ErrorMessage = "Invalid URL format.")]
         public string LinkedInProfile { get; set; }=string.Empty;
 
-        [Url(ErrorMessage = "Invalid URL format.")]
 
         public string GitHubProfile { get; set; } = string.Empty;
 

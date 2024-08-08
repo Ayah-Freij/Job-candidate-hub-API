@@ -38,6 +38,7 @@ namespace Job_candidate_hub_API.Features.Candidates.Services
             catch (Exception ex)
             {
                 // Log the exception
+                Console.WriteLine(ex);
                 return (false, null, ex.Message, 500);
             }
         }
